@@ -46,5 +46,5 @@ def handle(data):
       algorithm='HS256'
   )
 
-    data["token"] = token
-    return data
+  data["token"] = token
+  return data
