@@ -1,4 +1,5 @@
-import jwt from cryptography.hazmat.primitives 
+import jwt 
+from cryptography.hazmat.primitives 
 
 
 def handle(data):
