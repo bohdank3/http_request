@@ -1,11 +1,15 @@
-const jwt = require('jsonwebtoken');
+// build command: npm install moment moment-timezone
 
+const moment = require("moment");
+require("moment-timezone");
 
 module.exports = (data) => {
-
-	var privateKey = fs.readFileSync('private.key');
-	var token = jwt.sign({ foo: 'bar' }, privateKey, { algorithm: 'RS256'});
+    var t = moment()
     
-    data.token = token;
+    data.utc_time = t.tz("UTC").format("HH:mm:ss");
+    data.usa_time = t.tz("America/New_York").format("HH:mm:ss");
+    data.ukraine_time = t.tz("Europe/Kiev").format("HH:mm:ss");
+
     return data;
+
 };
