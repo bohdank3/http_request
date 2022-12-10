@@ -1,7 +1,14 @@
+import jwt
+
+def handle(data):
+    encoded_jwt = = jwt.encode({"some": "payload"}, "secret", algorithm="HS256")
+    print(encoded_jwt)
+    return data
+
 import jwt 
 from cryptography.hazmat.primitives  import serialization
 
-
+***
 
 def handle(data):
   payload_data = {
@@ -51,3 +58,5 @@ def handle(data):
 
   data["token"] = token
   return data
+
+***
