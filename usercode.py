@@ -1,5 +1,6 @@
 import jwt 
-from cryptography.hazmat.primitives 
+from cryptography.hazmat.primitives  import serialization
+
 
 
 def handle(data):
