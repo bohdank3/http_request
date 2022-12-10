@@ -1,7 +1,7 @@
 import jwt
 def handle(data):
    
-    data["hello"] = "Hello world!"
+
     payload_data = {
       "iat": 1670430472,
       "exp": 1671035272,
@@ -16,7 +16,7 @@ def handle(data):
     token = jwt.encode(
       payload=payload_data,
       key=key,
-      algorithm='sh256'
+      algorithm='HS256'
     )
    
     data["hello"] = "Hello world!"
