@@ -3,10 +3,10 @@ def handle(data):
    
 
     payload_data = {
-      "iat": 1670430472,
-      "exp": 1671035272,
-      "jti": "8TSuQqpkpAQC",
-      "application_id": "7918e7f8-ed7b-4be1-aca7-9bb2422e3f92"
+      "iat": data["now"],
+      "exp": data["future"],
+      "jti": data["jti"],
+      "application_id": data["application_id"]
 	 }
 
 
